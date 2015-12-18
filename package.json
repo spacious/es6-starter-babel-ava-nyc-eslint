@@ -1,0 +1,78 @@
+{
+  "name": "es6-starter-babel-ava-nyc-eslint",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint src/parse",
+    "test": "nyc ava",
+    "build": "babel -d ./lib --presets babel-preset-es2015 ./src/parse",
+    "watch": "babel -w -d ./lib --presets babel-preset-es2015 ./src/parse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacious/es6-starter-babel-ava-nyc-eslint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spacious/es6-starter-babel-ava-nyc-eslint/issues"
+  },
+  "homepage": "https://github.com/spacious/es6-starter-babel-ava-nyc-eslint#readme",
+  "devDependencies": {
+    "ava": "^0.6.1",
+    "babel-cli": "^6.2.0",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.1.18",
+    "eslint": "^1.10.3",
+    "nyc": "^3.2.2"
+  },
+  "babel": {
+    "ignore": [
+      "node_modules/*"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint:recommended",
+    "rules": {
+      "quotes": [
+        2,
+        "double",
+        "avoid-escape"
+      ],
+      "no-var": 2,
+      "space-after-keywords": 2,
+      "strict": 0,
+      "no-underscore-dangle": 0,
+      "curly": 0,
+      "no-multi-spaces": 0,
+      "key-spacing": 0,
+      "no-return-assign": 0,
+      "consistent-return": 0,
+      "no-shadow": 0,
+      "comma-dangle": 0,
+      "no-use-before-define": 0,
+      "no-empty": 0,
+      "new-parens": 0,
+      "no-cond-assign": 0,
+      "no-fallthrough": 0,
+      "new-cap": 0,
+      "no-loop-func": 0,
+      "no-unreachable": 0,
+      "no-labels": 0,
+      "no-process-exit": 0,
+      "camelcase": 0,
+      "no-console": 0,
+      "no-constant-condition": 0,
+      "no-inner-declarations": 0,
+      "semi": 2
+    },
+    "env": {
+      "node": true
+    }
+  }
+}
